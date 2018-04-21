@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+from BarcodeMediaPlayer import BarcodeMediaPlayer
+
+import argparse
+parser = argparse.ArgumentParser(description='Media player controller driven by barcodes')
+parser.add_argument('config', help="Configuration file or directory to load")
+args = parser.parse_args()
+
+bmp = BarcodeMediaPlayer(args.config)
+bmp.cli()
